@@ -1,0 +1,61 @@
+/* General styles */
+:root {
+  --bg-color: #020204;
+  --text-color: #fff;
+  --accent-color: #c7a17a;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Jost', serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+a:hover,
+a.active {
+  color: var(--accent-color);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+/* General styles */
+
+/* Header */
+
+.header-top {
+  padding-block: 8px;
+}
+
+.languages a,
+.header-phone {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Header */
