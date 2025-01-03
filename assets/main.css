@@ -2,6 +2,7 @@
 :root {
   --bg-color: #020204;
   --text-color: #fff;
+  --second-text-color: #dfdfdf;
   --accent-color: #c7a17a;
   --header-border: #32323d;
 }
@@ -144,3 +145,108 @@ a.active {
 }
 
 /* Header */
+
+/* Intro */
+
+.intro {
+  padding-block: 120px;
+  background: url('./img/hero.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.intro-content {
+  width: 50%;
+}
+
+.intro-content h1 {
+  margin-bottom: 35px;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 144%;
+  text-transform: uppercase;
+}
+
+.intro-content p {
+  margin-bottom: 35px;
+  color: var(--second-text-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+
+.intro-content a {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.intro-content a:last-child {
+  margin-right: 0;
+}
+
+.intro-content .btn {
+  border-radius: 10px;
+  padding-block: 10px;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 10%;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.intro-content .btn:hover {
+  color: var(--text-color) !important;
+  transform: scale(1.05);
+}
+
+.intro-content .btn-buy {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.intro-content .btn-buy:hover {
+  background-color: transparent;
+  border-color: var(--second-text-color);
+}
+
+@media (max-width: 1024px) {
+  .intro-content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding-block: 80px;
+  }
+
+  .intro-content h1 {
+    font-size: 40px;
+  }
+
+  .intro-content .btn:not(:last-child) {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .intro {
+    padding-block: 50px;
+  }
+
+  .intro-content {
+    width: 100%;
+  }
+
+  .intro-content h1 {
+    font-size: 30px;
+  }
+
+  .intro-content p {
+    font-size: 14px;
+  }
+}
+/* Intro */
