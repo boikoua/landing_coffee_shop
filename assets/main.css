@@ -3,6 +3,7 @@
   --bg-color: #020204;
   --text-color: #fff;
   --accent-color: #c7a17a;
+  --header-border: #32323d;
 }
 
 html,
@@ -31,7 +32,7 @@ a {
 
 a:hover,
 a.active {
-  color: var(--accent-color);
+  color: var(--accent-color) !important;
 }
 
 .wrapper {
@@ -56,6 +57,90 @@ a.active {
 .header-phone {
   font-size: 14px;
   font-weight: 600;
+}
+
+.header nav {
+  position: relative;
+  padding-block: 30px;
+  border-top: 1px solid var(--header-border);
+  border-bottom: 1px solid var(--header-border);
+  background-color: var(--bg-color) !important;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-brand img {
+  max-width: 58px;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px #fff);
+}
+
+.header .nav-item .nav-link {
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 35px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.header .nav-item:last-child .nav-link {
+  margin-right: 0;
+}
+
+.header .nav-item {
+  margin-bottom: 20px;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  list-style: none;
+}
+
+.header-icons a {
+  position: relative;
+}
+
+.header-icons a span > span {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+@media (min-width: 992px) {
+  .header .nav-item {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header nav {
+    padding-block: 18px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-icons {
+    gap: 16px;
+  }
 }
 
 /* Header */
